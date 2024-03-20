@@ -1,4 +1,7 @@
-//endpoints must start with "/"
+/*
+  - endpoints must start with "/"
+  This fetch works only when used in react, and runned in dev. It does not work in node.
+*/
 import { useState, useEffect } from "react";
 
 export function fetchAPI(endpoint, url = `https://api.realworld.io/api`) {
@@ -29,9 +32,5 @@ export function fetchAPI(endpoint, url = `https://api.realworld.io/api`) {
     }
     fetching();
   }, []);
-  return {
-    isLoading,
-    data,
-    error,
-  };
+  return [isLoading, data, error];
 }
