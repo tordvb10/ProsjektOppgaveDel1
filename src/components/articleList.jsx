@@ -1,5 +1,6 @@
 import React from "react";
 import { fetchAPI } from "../hook/fetchAPI";
+import style from "./articleList.module.css";
 
 export const ArticleList = () => {
   const [isLoading, articles, error] = fetchAPI("/articles");
@@ -8,7 +9,7 @@ export const ArticleList = () => {
   if (error) return <div>Error: {error}</div>;
 
   return (
-    <div className="article-list">
+    <div className={style.articleList}>
       <ul>
         {articles &&
           articles.map((article) => (
