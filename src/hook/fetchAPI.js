@@ -1,10 +1,11 @@
 /*
   - endpoints must start with "/"
   This fetch works only when used in react, and runned in dev. It does not work in node.
+  Meaning it does not work in node, only in webbrowser.
 */
 import { useState, useEffect } from "react";
 
-export function fetchAPI(endpoint, url = `https://api.realworld.io/api`) {
+export default function fetchAPI(endpoint, url = `https://api.realworld.io/api`) {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
   const isLoading = data === null && error === null;
