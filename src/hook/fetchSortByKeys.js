@@ -10,6 +10,7 @@ export default function fetchSortByKeys(KeysToSave,obj) {
         KeysToSave.forEach(theKEY => {
             savingThisKey[theKEY] = content[theKEY]
         });
+        savingThisKey.AllKeys = Object.keys(content)
         return savingThisKey
     })
 }
