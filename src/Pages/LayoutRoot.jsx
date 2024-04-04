@@ -1,4 +1,4 @@
-import { Outlet,NavLink } from "react-router-dom"
+import { Outlet, NavLink } from "react-router-dom"
 export function LayoutRoot(){
     return (
         <>
@@ -6,10 +6,10 @@ export function LayoutRoot(){
                 <nav>
                     <ul>
                         <li>
-                            <Navlink
+                            <NavLink
                             to="/"
                             >
-                            </Navlink>
+                            </NavLink>
                         </li>
                     </ul>
                 </nav>
