@@ -8,7 +8,7 @@ export function LayoutRoot(){
                         <li>
                             <NavLink
                             to="/"
-                            >
+                            > HOME
                             </NavLink>
                         </li>
                     </ul>
