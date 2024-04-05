@@ -5,6 +5,7 @@ import { LandingPage } from "./Pages/LandingPage.jsx";
 import { LayoutRoot } from "./Pages/LayoutRoot.jsx";
 import { PageNotFound } from "./Pages/PageNotFound.jsx";
 import { ArticlePage } from "./Pages/ArticlePage.jsx";
+import { Article } from "./Pages/Article.jsx";
 
 function App() {
   /* comment the section under out to see that fetchAPI only works in dev as explained in its document. */
@@ -21,6 +22,7 @@ function App() {
                     <Route index element={<LandingPage />}/>
                     <Route path="*" element={<PageNotFound />} />
                     <Route path="/article/" element={<ArticlePage />}/>
+                    <Route path="/article/:slug" element={<Article />}/>
                 </Route>
             </Routes>
         </BrowserRouter>

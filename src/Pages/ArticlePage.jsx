@@ -1,5 +1,5 @@
 export function ArticlePage() {
     return (
-        <p>about an article</p>
+        <p>about all article</p>
     )
 }
