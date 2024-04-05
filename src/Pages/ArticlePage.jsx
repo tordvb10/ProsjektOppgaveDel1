@@ -1,5 +1,4 @@
-
-
+import { ArticleList } from "../components/ArticleLists.jsx"
 export function ArticlePage() {
     return (
         <main>
