@@ -1,13 +1,15 @@
-import React from "react";
-import { fetchAPI } from "../hook/fetchAPI";
+//import React from "react";
+//import { fetchAPI } from "../hook/fetchAPI";
+import { Link} from "react-router-dom"
 import style from "./articleList.module.css";
+import {articles} from "../utilities/jsonfiles/GET-articles-ALLKEYS.json"
 
-export const ArticleList = () => {
-  const [isLoading, articles, error] = fetchAPI("/articles");
+export function ArticleList() {
+  //const [isLoading, articles, error] = fetchAPI("/articles");
 
-  if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error}</div>;
-
+  //if (isLoading) return <div>Loading...</div>;
+  //if (error) return <div>Error: {error}</div>;
+  console.log("Hello World")
   return (
     <>
       <div className={style.articleList}>
@@ -26,6 +28,9 @@ export const ArticleList = () => {
                         <p>{tag}</p>
                       </li>
                     ))}
+                    <p>
+                      <Link to={`/article/${article.slug}`}>READ MORE...</Link>
+                    </p>
                 </ul>
               </li>
             ))}
