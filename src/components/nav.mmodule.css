@@ -9,3 +9,17 @@
   color: #5bb85d;
   font-size: 3rem;
 }
+
+.nav > ul {
+  display: inline-flex;
+  list-style: none;
+  gap: 1em;
+  align-items: center;
+}
+
+.nav > li {
+  width: 7em;
+  height: 2.5rem;
+  color: #000;
+  font-style: 2rem;
+}
