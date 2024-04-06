@@ -1,11 +1,11 @@
 .nav {
   background-color: #fff;
-}
-
--nav > h2 {
-  color: #5bb85d;
   font-family: "Titillium Web", sans-serif;
   font-weight: 700;
   font-style: normal;
+}
+
+.nav > h2 {
+  color: #5bb85d;
   font-size: 3rem;
 }
