@@ -1,10 +1,11 @@
 import { Outlet, NavLink } from "react-router-dom";
+import styles from "./LayoutRoot.module.css";
 
 export function LayoutRoot() {
   return (
     <>
       <header>
-        <nav>
+        <nav className={styles.nav}>
           <h2>conduit</h2>
           <ul>
             <li>
