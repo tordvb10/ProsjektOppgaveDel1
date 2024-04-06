@@ -6,6 +6,8 @@
 }
 
 .nav > h2 {
+  height: 7em;
+  width: 20em;
   color: #5bb85d;
   font-size: 3rem;
 }
