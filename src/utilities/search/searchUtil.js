@@ -1,6 +1,6 @@
 import items from "../jsonfiles/single-step-function.json";
 
-export function searchItems(query) {
+export function searchArticles(query) {
   const lowercasedQuery = query.toLowerCase();
   return items.filter((item) => {
     const matchesSlug = item.slug.toLowerCase().includes(lowercasedQuery);
