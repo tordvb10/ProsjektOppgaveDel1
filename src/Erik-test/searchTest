@@ -1,0 +1,51 @@
+/// to be fixed & tested ///
+
+import React from "react";
+import { Input } from "antd";
+import { connect } from "dva";
+
+const Search = Input.Search;
+
+@connect(({ rule, loading }) => ({
+  rule,
+  loading: loading.models.rule,
+}))
+export default class SearchBox extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isListLoaded: false,
+      resultArr: {},
+    };
+  }
+
+  performSearch(value) {
+    for (var i = this.props.rule.data.list.length; i--; ) {
+      for (var key in this.props.rule.data.list[i]) {
+        this.setState({ resultArr: this.state.resultArr.push(i) });
+      }
+    }
+  }
+
+  componentDidMount() {
+    if (!this.state.isListLoaded) {
+      const { dispatch } = this.props;
+      dispatch({
+        type: "rule/fetch",
+      });
+      this.setState({ isListLoaded: true });
+    }
+  }
+
+  render() {
+    return (
+      <div>
+        <Search
+          placeholder="Search..."
+          onChange={(event) => this.performSearch(event.target.value)}
+          style={{ width: "250px", "margin-left": "20px" }}
+        />
+      </div>
+    );
+  }
+}
