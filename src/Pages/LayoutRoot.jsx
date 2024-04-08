@@ -16,6 +16,7 @@ export function LayoutRoot() {
     <>
       <header>
         <nav className={styles.nav}>
+          <h2>conduit</h2>
           <ul>
             {navinfo.map((info) => {
               return (
