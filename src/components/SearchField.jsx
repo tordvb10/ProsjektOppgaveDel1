@@ -7,12 +7,11 @@ export function SearchField() {
 
   function newSearch() {
     const event = document.querySelector("#searchID").value;
-    console.log(event)
-    const newQuery = event.target.value;
-    setQuery(newQuery);
+    setQuery(event);
 
-    const filteredResults = searchArticles(newQuery);
+    const filteredResults = searchArticles(event);
     setResults(filteredResults);
+
   };
 
   return (
@@ -26,14 +25,14 @@ export function SearchField() {
       />
       <div>
         {results.length > 0 ? (
-          results.map((item, index) => (
-            <div key={index}>
-              <h2>{item.title}</h2>
-              <p>Author: {item.author}</p>
-              <p>Slug: {item.slug}</p>
-              <p>Tags: {item.tagList.join(", ")}</p>
-            </div>
-          ))
+          results.map((item, index) => {
+            return (
+                <div key={index}>
+                    {item.slug}
+                    {console.log(item)}
+                </div>
+          )
+        })
         ) : (
           <p>No results found</p>
         )}
