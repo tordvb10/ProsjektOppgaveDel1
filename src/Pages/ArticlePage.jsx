@@ -5,7 +5,7 @@ export function ArticlePage() {
         <main>
             <h1>This is about all articles</h1>
             <SearchField />
-            <ArticleLists />
+            
         </main>
     )
 }
