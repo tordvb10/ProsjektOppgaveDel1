@@ -1,4 +1,6 @@
 import { Outlet, NavLink } from "react-router-dom";
+import styles from "./LayoutRoot.module.css";
+
 export function LayoutRoot() {
   const navinfo = [
     {
@@ -13,11 +15,11 @@ export function LayoutRoot() {
   return (
     <>
       <header>
-        <nav>
+        <nav className={styles.nav}>
           <ul>
             {navinfo.map((info) => {
               return (
-                <li>
+                <li key={info.DisplayName}>
                   <NavLink to={info.TO}> {info.DisplayName}</NavLink>
                 </li>
               );
