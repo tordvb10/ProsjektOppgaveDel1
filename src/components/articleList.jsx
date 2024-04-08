@@ -12,11 +12,10 @@ export function ArticleList() {
   console.log("Hello World");
   return (
     <>
-      <Searchbar onSearch={searchArticles} />
       <div className={style.articleList}>
         <ul>
-          {filteredArticles &&
-            filteredArticles.map((article) => (
+          {articles &&
+            articles.map((article) => (
               <li key={article.slug}>
                 <h4>{article.author}</h4>
                 <p>{article.date}</p>

@@ -1,4 +1,4 @@
-import items from "../jsonfiles/single-step-function.json";
+import items from "../utilities/jsonfiles/GET-articles-ALLKEYS.json";
 
 export function searchArticles(query) {
   const lowercasedQuery = query.toLowerCase();
