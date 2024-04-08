@@ -1,19 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .nav {
+  width: 100%;
   display: inline-flex;
+  justify-content: space-between;
   background-color: #fff;
+  color: #000;
   font-family: "Titillium Web", sans-serif;
   font-weight: 700;
   font-style: normal;
 }
 
 .nav > h2 {
-  height: 7em;
-  width: 20em;
+  margin-left: 2em;
   color: #5bb85d;
   font-size: 3rem;
+  font-style: bold;
 }
 
 .nav > ul {
+  margin-right: 20em;
   display: inline-flex;
   list-style: none;
   gap: 1em;
@@ -21,8 +30,5 @@
 }
 
 .nav > li {
-  width: 7em;
-  height: 2.5rem;
-  color: #000;
   font-style: 2rem;
 }
