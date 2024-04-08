@@ -1,39 +1,15 @@
-import React, { useState } from "react";
-import { fetchAPI } from "../hook/fetchAPI";
-import { Searchbar } from "./Searchbar"; // Make sure this path is correct
+//import React from "react";
+//import { fetchAPI } from "../hook/fetchAPI";
+import { Link } from "react-router-dom";
 import style from "./articleList.module.css";
+import { articles } from "../utilities/jsonfiles/GET-articles-ALLKEYS.json";
 
-export const ArticleList = () => {
-  const [isLoading, articles, error] = fetchAPI("/articles");
-  const [filteredArticles, setFilteredArticles] = useState([]);
+export function ArticleList() {
+  //const [isLoading, articles, error] = fetchAPI("/articles");
 
-  // This effect updates the filtered articles whenever the articles change.
-  React.useEffect(() => {
-    setFilteredArticles(articles);
-  }, [articles]);
-
-  const searchArticles = (query) => {
-    if (!articles) return;
-
-    const lowercasedQuery = query.toLowerCase();
-    const filtered = articles.filter((article) => {
-      return (
-        article.name.toLowerCase().includes(lowercasedQuery) ||
-        article.slug.toLowerCase().includes(lowercasedQuery) ||
-        article.author.toLowerCase().includes(lowercasedQuery) ||
-        (article.tags &&
-          article.tags.some((tag) =>
-            tag.toLowerCase().includes(lowercasedQuery)
-          ))
-      );
-    });
-
-    setFilteredArticles(filtered);
-  };
-
-  if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error}</div>;
-
+  //if (isLoading) return <div>Loading...</div>;
+  //if (error) return <div>Error: {error}</div>;
+  console.log("Hello World");
   return (
     <>
       <Searchbar onSearch={searchArticles} />
@@ -53,6 +29,9 @@ export const ArticleList = () => {
                         <p>{tag}</p>
                       </li>
                     ))}
+                  <p>
+                    <Link to={`/article/${article.slug}`}>READ MORE...</Link>
+                  </p>
                 </ul>
               </li>
             ))}
@@ -60,4 +39,4 @@ export const ArticleList = () => {
       </div>
     </>
   );
-};
+}
