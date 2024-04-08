@@ -1,4 +1,4 @@
-import articles from "../utilities/jsonfiles/GET-articles-ALLKEYS.json";
+import articles from "../jsonfiles/GET-articles-ALLKEYS.json"
 
 export function searchArticles(query) {
   const lowercasedQuery = query.toLowerCase();

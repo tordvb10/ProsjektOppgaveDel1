@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { searchArticles } from "../utilities/search/searchUtil.js";
+import { searchArticles } from "../utilities/search/searchArticles.js";
 
 export function SearchField() {
   const [query, setQuery] = useState("");
