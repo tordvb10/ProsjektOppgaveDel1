@@ -1,20 +1,23 @@
 import { useState } from "react";
 import { searchArticles } from "../utilities/search/searchArticles.js";
-
+import style from "./articleList.module.css";
+import { articles } from "../utilities/jsonfiles/GET-articles-ALLKEYS.json"
+import { ArticleMaps } from "./ArticleMaps.jsx";
 export function SearchField() {
-  const [query, setQuery] = useState("");
-  const [results, setResults] = useState([]);
-
-  function newSearch() {
-    const event = document.querySelector("#searchID").value;
-    console.log(event)
-    const newQuery = event.target.value;
-    setQuery(newQuery);
-
-    const filteredResults = searchArticles(newQuery);
-    setResults(filteredResults);
-  };
-
+    const [query, setQuery] = useState("");
+    const [results, setResults] = useState(articles);
+    function newSearch() {
+      const event = document.querySelector("#searchID").value;
+      setQuery(event);
+      const filteredResults = searchArticles(event);
+      let final_results = filteredResults
+      if(filteredResults.length === 0 && query.length > 0) {
+        final_results = null
+      } else if (query.length === 0 && filteredResults.length > 0) {
+        final_results = articles
+      }
+      setResults(final_results);
+    };
   return (
     <div>
       <input
@@ -25,18 +28,9 @@ export function SearchField() {
         placeholder="Search by slug, title, author, or tags"
       />
       <div>
-        {results.length > 0 ? (
-          results.map((item, index) => (
-            <div key={index}>
-              <h2>{item.title}</h2>
-              <p>Author: {item.author}</p>
-              <p>Slug: {item.slug}</p>
-              <p>Tags: {item.tagList.join(", ")}</p>
-            </div>
-          ))
-        ) : (
-          <p>No results found</p>
-        )}
+          <ul className={style.master_ul}>
+              <ArticleMaps results={results}/>
+          </ul>
       </div>
     </div>
   );
