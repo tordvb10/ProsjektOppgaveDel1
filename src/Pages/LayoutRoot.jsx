@@ -5,11 +5,11 @@ export function LayoutRoot() {
   const navinfo = [
     {
       TO: "/",
-      DisplayName: "HOME",
+      DisplayName: "Home",
     },
     {
       TO: "/article/",
-      DisplayName: "ARTICLE",
+      DisplayName: "Article",
     },
   ];
   return (
