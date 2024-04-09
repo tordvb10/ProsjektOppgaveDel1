@@ -9,7 +9,7 @@ export function LayoutRoot() {
           <h2>conduit</h2>
           <ul>
             <li>
-              <NavLink to="/">HOME</NavLink>
+              <NavLink to="/">Home</NavLink>
             </li>
           </ul>
         </nav>

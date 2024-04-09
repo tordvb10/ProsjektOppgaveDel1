@@ -28,9 +28,11 @@
   align-items: center;
 }
 
-.nav > li {
-  font-style: 2rem;
-  color: #c3c4c4;
+.nav ul > li > a {
+  font-style: 1rem;
+  font-weight: 400;
+  color: #848d96;
+  text-decoration: none;
 }
 
 .headerContainer {
