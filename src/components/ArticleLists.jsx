@@ -2,8 +2,6 @@ import style from "./articleList.module.css";
 import {articles} from "../utilities/jsonfiles/GET-articles-ALLKEYS.json"
 import { ArticleBox } from "./ArticleBox.jsx";
 export function ArticleLists() {
-  console.log(style)
-  console.log("Hello World")
   return (
     <>
         <ul className={style.master_ul}>

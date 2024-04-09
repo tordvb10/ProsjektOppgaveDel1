@@ -1,4 +1,3 @@
-import { ArticleLists } from "../components/ArticleLists.jsx"
 import { SearchField } from "../components/SearchField.jsx"
 export function ArticlePage() {
     return (

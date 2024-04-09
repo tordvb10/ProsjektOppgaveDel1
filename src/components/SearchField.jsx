@@ -1,18 +1,22 @@
 import { useState } from "react";
 import { searchArticles } from "../utilities/search/searchArticles.js";
-import { ArticleBox } from "./ArticleBox.jsx";
-import { ArticleLists } from "./ArticleLists.jsx";
 import style from "./articleList.module.css";
 import { articles } from "../utilities/jsonfiles/GET-articles-ALLKEYS.json"
+import { ArticleMaps } from "./ArticleMaps.jsx";
 export function SearchField() {
     const [query, setQuery] = useState("");
     const [results, setResults] = useState(articles);
     function newSearch() {
-        const event = document.querySelector("#searchID").value; //firsttime ? "" : 
-        console.log(event.length)
-        setQuery(event);
-        const filteredResults = searchArticles(event);
-        setResults(filteredResults);
+      const event = document.querySelector("#searchID").value;
+      setQuery(event);
+      const filteredResults = searchArticles(event);
+      let final_results = filteredResults
+      if(filteredResults.length === 0 && query.length > 0) {
+        final_results = null
+      } else if (query.length === 0 && filteredResults.length > 0) {
+        final_results = articles
+      }
+      setResults(final_results);
     };
   return (
     <div>
@@ -24,25 +28,9 @@ export function SearchField() {
         placeholder="Search by slug, title, author, or tags"
       />
       <div>
-        {results.length > 0 ? (
-            <ul className={style.master_ul}>
-                {
-                    results.map((article) => {
-                        return (                        
-                            <li key={article.slug}>                            
-                                <ArticleBox ArticleElement={article} />
-                            </li>
-                        )
-                    })
-                }
-            </ul>
-        ) : 
-        query.length > 0 ? (
-            <p> No results found </p>
-        ) : (
-            <ArticleLists />
-        )  
-        }
+          <ul className={style.master_ul}>
+              <ArticleMaps results={results}/>
+          </ul>
       </div>
     </div>
   );
