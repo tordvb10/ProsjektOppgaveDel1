@@ -28,6 +28,7 @@
 }
 
 .nav > ul > li > a {
+  padding: 0.625em 0em;
   font-size: 1rem;
   font-weight: 400;
   color: #848d96;
@@ -35,7 +36,7 @@
 }
 
 .nav > ul > li > a:hover {
-  color: #615b5d;
+  color: #000;
 }
 
 .headerContainer {
@@ -53,4 +54,10 @@
 .headerContainer > h3 {
   font-size: 1.5rem;
   font-weight: 300;
+}
+
+.footer {
+  background-color: #3b4551;
+  font-family: "Source Sans 3", sans-serif;
+  text-align: center;
 }

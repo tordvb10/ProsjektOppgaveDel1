@@ -33,7 +33,7 @@ export function LayoutRoot() {
         </div>
       </header>
       <Outlet />
-      <footer>
+      <footer className={styles.footer}>
         <p>ProsjektOppgaveDel2</p>
       </footer>
     </>
