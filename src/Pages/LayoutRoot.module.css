@@ -9,7 +9,6 @@
   justify-content: space-between;
   background-color: #fff;
   font-family: "Titillium Web", sans-serif;
-  font-weight: 700;
   font-style: normal;
 }
 
@@ -17,7 +16,7 @@
   margin-left: 2em;
   color: #5bb85d;
   font-size: 1.5rem;
-  font-style: 700;
+  font-weight: 700;
 }
 
 .nav > ul {
@@ -28,11 +27,15 @@
   align-items: center;
 }
 
-.nav ul > li > a {
-  font-style: 1rem;
+.nav > ul > li > a {
+  font-size: 1rem;
   font-weight: 400;
   color: #848d96;
   text-decoration: none;
+}
+
+.nav > ul > li > a:hover {
+  color: #615b5d;
 }
 
 .headerContainer {
