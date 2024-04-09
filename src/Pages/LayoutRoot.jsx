@@ -34,7 +34,7 @@ export function LayoutRoot() {
       </header>
       <Outlet />
       <footer className={styles.footer}>
-        <img src="../Images/github.png" alt="Github Logo" />
+        <img src="../../src/Images/github.png" alt="Github Logo" />
 
         <p>React Prosjekt: Tord & Erik</p>
       </footer>

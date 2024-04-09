@@ -57,12 +57,20 @@
 }
 
 .footer {
+  width: 100%;
   background-color: #3b4551;
   color: #fff;
   font-family: "Source Sans 3", sans-serif;
-  text-align: center;
+  display: inline-flex;
+  justify-content: center;
 }
 
 .footer > p {
   padding: 1rem 0rem;
+}
+
+.footer > img {
+  height: 1.5rem;
+  width: 1.5rem;
+  padding: 1em 1em 0 0;
 }
