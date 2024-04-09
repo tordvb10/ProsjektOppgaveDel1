@@ -5,8 +5,12 @@ const articles = articlesOBJ.articles
 console.log(articles[0].tagList)
 const attackKEY = [
     {
-        key:"tagList",
+        key: "tagList",
         isArrays: true
+    },
+    {
+        key: "favoritesCount",
+        isArrays: false
     }
 ]
 let OBJ = {}
