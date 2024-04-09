@@ -13,6 +13,10 @@ export function LayoutRoot() {
             </li>
           </ul>
         </nav>
+        <div className={styles.headerContainer}>
+          <h1>conduit</h1>
+          <h3>A place to share your knowledge</h3>
+        </div>
       </header>
       <Outlet />
       <footer>

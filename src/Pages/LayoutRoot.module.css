@@ -8,7 +8,6 @@
   display: inline-flex;
   justify-content: space-between;
   background-color: #fff;
-  color: #000;
   font-family: "Titillium Web", sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -17,8 +16,8 @@
 .nav > h2 {
   margin-left: 2em;
   color: #5bb85d;
-  font-size: 3rem;
-  font-style: bold;
+  font-size: 1.5rem;
+  font-style: 700;
 }
 
 .nav > ul {
@@ -31,4 +30,22 @@
 
 .nav > li {
   font-style: 2rem;
+  color: #c3c4c4;
+}
+
+.headerContainer {
+  background-color: #5bb85d;
+  color: #fff;
+  font-family: "Titillium Web", sans-serif;
+  text-align: center;
+}
+
+.headerContainer > h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+.headerContainer > h3 {
+  font-size: 1.5rem;
+  font-weight: 300;
 }
