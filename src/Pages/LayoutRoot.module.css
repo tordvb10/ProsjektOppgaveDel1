@@ -58,6 +58,11 @@
 
 .footer {
   background-color: #3b4551;
+  color: #fff;
   font-family: "Source Sans 3", sans-serif;
   text-align: center;
+}
+
+.footer > p {
+  padding: 1rem 0rem;
 }
