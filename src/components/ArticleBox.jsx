@@ -4,7 +4,6 @@ export function ArticleBox(props) {
   const article = props.ArticleElement;
   return (
     <>
-    <div className={style.article}
       <h4 className={style.name}>{article.author.username}</h4>
       <p className={style.data}>{article.createdAt}</p>
       <h3 className={style.slugs}>{article.slug}</h3>
@@ -20,7 +19,6 @@ export function ArticleBox(props) {
           <Link to={`/article/${article.slug}`}>READ MORE...</Link>
         </p>
       </ul>
-      </div>
     </>
   );
 }
