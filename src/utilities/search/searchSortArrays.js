@@ -1,15 +1,18 @@
+import fs from "fs"
 import { searchArrays } from "./searchArrays.js";
 import articlesOBJ from "../jsonfiles/GET-articles-ALLKEYS.json" with {type: "json"}
-console.log(articlesOBJ.articles[0])
 const articles = articlesOBJ.articles
-console.log(articles[0].tagList)
 const attackKEY = [
     {
-        key: "tagList",
+        key: ["tagList"],
         isArrays: true
     },
     {
-        key: "favoritesCount",
+        key: ["favoritesCount"],
+        isArrays: false
+    },
+    {
+        key: ["author","username"],
         isArrays: false
     }
 ]
@@ -20,6 +23,8 @@ articles.map((article)=>{
     })
 })
 console.log(OBJ)
+fs.writeFileSync("./src/utilities/jsonfiles/searchSortArrays.json",JSON.stringify(OBJ))
+//console.log(OBJ)
 Object.keys(OBJ.tagList).map((tag)=>{
     if (OBJ.tagList[tag].length > 1){
         console.log(tag)
