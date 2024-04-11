@@ -23,25 +23,27 @@
   align-self: flex-start;
 }
 
-.taglister {
+.ArticleBox > ul {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
   gap: 1em;
   margin-top: auto;
   align-self: flex-end;
+  padding: 0;
+  margin: 0;
 }
 
-.l_itag {
+.ArticleBox > ul > li {
   border: 1px solid black;
   padding: 0.5rem;
 }
 
-.p_tag {
+.ArticleBox > ul > li > .p_tag {
   margin: 0;
 }
 
-.p_link {
+.ArticleBox > ul > .p_link {
   width: 100%;
   text-align: center;
   margin-top: 1rem;
