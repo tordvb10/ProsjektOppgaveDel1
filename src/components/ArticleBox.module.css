@@ -1,17 +1,48 @@
 .ArticleBox {
   background-color: brown;
+  font-family: "Titillium Web", sans-serif;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  position: relative;
+  height: auto;
 }
 
 .ArticleBox > img {
   height: 2rem;
   width: 2rem;
   border-radius: 1rem;
+  align-self: flex-start;
 }
 
-.name {
-  background-color: cyan;
+.name,
+.data,
+.slugs {
+  align-self: flex-start;
 }
 
-.data {
-  background-color: magenta;
+.taglister {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  margin-top: auto;
+  align-self: flex-end;
+}
+
+.l_itag {
+  border: 1px solid black;
+  padding: 0.5rem;
+}
+
+.p_tag {
+  margin: 0;
+}
+
+.p_link {
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
 }
