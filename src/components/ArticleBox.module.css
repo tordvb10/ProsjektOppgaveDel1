@@ -1,0 +1,17 @@
+.ArticleBox {
+  background-color: brown;
+}
+
+.ArticleBox > img {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 1rem;
+}
+
+.name {
+  background-color: cyan;
+}
+
+.data {
+  background-color: magenta;
+}

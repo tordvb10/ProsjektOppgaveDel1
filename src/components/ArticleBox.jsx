@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 export function ArticleBox(props) {
   const article = props.ArticleElement;
   return (
-    <>
+    <div className={style.ArticleBox}>
+      <img src={article.author.image} alt="Author avatar" />
       <h4 className={style.name}>{article.author.username}</h4>
       <p className={style.data}>{article.createdAt}</p>
       <h3 className={style.slugs}>{article.slug}</h3>
@@ -19,6 +20,6 @@ export function ArticleBox(props) {
           <Link to={`/article/${article.slug}`}>READ MORE...</Link>
         </p>
       </ul>
-    </>
+    </div>
   );
 }

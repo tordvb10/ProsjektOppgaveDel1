@@ -19,7 +19,7 @@ export function SearchField() {
     setResults(final_results);
   }
   return (
-    <div>
+    <div className={style.SearchField}>
       <input
         id="searchID"
         type="text"
