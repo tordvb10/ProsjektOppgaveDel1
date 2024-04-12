@@ -8,7 +8,7 @@ export function SearchBox(props) {
         console.log(tag)
         console.log(OBJ.tagList[tag])   
     }
-    
+    console.log(style)
 
     return (
         <div className={style.ButtonWrap}>
@@ -17,7 +17,7 @@ export function SearchBox(props) {
                     if (OBJ.tagList[tag].length > 1){
                         console.log(tag)
                         return (
-                            <button className={style.buttontag} onClick={clickTag(tag)} key={tag}>{tag}</button>
+                            <button className={style.buttontag} onClick={() => clickTag(tag)} key={tag}>{tag}</button>
                         )
                     }
                 })
