@@ -2,9 +2,12 @@ import {data as OBJ} from "../utilities/jsonfiles/searchSortArrays.json" ;
 import { articles } from "../utilities/jsonfiles/GET-articles-ALLKEYS.json"
 import { useState } from "react";
 import style from "./SearchBox.module.css"
+import { newSearch } from "../utilities/search/newSearch";
 export function SearchBox(props) {
     console.log(props.useStateInfo)
     const [currentSlugs,setCurrentSlugs] = [props.useStateInfo.currentSlugs.data,(value) => {props.useStateInfo.currentSlugs.funk(value)}]
+    const [query, setQuery] = [props.useStateInfo.query.data,(value) => {props.useStateInfo.query.funk(value)}]
+    const [results, setResults] = [props.useStateInfo.results.data,(value) => {props.useStateInfo.results.funk(value)}]
     const [currentTags, setCurrentTags] = useState([])
     function selectActiveArticles(ByTags){
         if (ByTags.length === 0) {
@@ -34,6 +37,7 @@ export function SearchBox(props) {
         setCurrentTags(currentTags)
         //let current_tags = OBJ.tagList[tag]
         selectActiveArticles(currentTags)
+        newSearch(props)
     }
     return (
         <div className={style.ButtonWrap}>
@@ -41,7 +45,12 @@ export function SearchBox(props) {
                 Object.keys(OBJ.tagList).map((tag)=>{
                     if (OBJ.tagList[tag].length > 1){
                         return (
-                            <button id={`buttontagID${tag}`} className={style.buttontag} onClick={() => clickTag(tag)} key={tag}>{tag}</button>
+                            <button 
+                                id={`buttontagID${tag}`} 
+                                className={style.buttontag} 
+                                onClick={() => clickTag(tag)} 
+                                key={tag}>{tag}
+                            </button>
                         )
                     }
                 })
