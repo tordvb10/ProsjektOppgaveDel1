@@ -9,7 +9,9 @@ export function ArticlePage() {
   const [currentSlugs,setCurrentSlugs] = useState(articles.map((article)=>{return article.slug}))
   console.log(currentSlugs)
   const [results, setResults] = useState(filterArticleBySlugs(currentSlugs));
+  console.log(results)
   const [query, setQuery] = useState("");
+  const [currentTags, setCurrentTags] = useState([])
   const useStateInfo = {
     currentSlugs: {
       data: currentSlugs,
@@ -23,13 +25,17 @@ export function ArticlePage() {
       data: results,
       funk: setResults
     },
+    tags: {
+      data: currentTags,
+      funk: setCurrentTags
+    },
   }
   const imports = {
     articles: articles
   }
   return (
     <main className={styles.main}>
-      {currentSlugs}
+      {currentSlugs.join(", ")}
       <h1>This is about all articles</h1>
       <SearchBox useStateInfo={useStateInfo} imports={imports} />
       <SearchField useStateInfo={useStateInfo} imports={imports} />
