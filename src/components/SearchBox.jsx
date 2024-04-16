@@ -42,7 +42,9 @@ export function SearchBox(props) {
         //let current_tags = OBJ.tagList[tag]
         selectActiveArticles(currentTags)
         console.log(currentSlugs)
-        newSearch(props)
+        props.useStateInfo.currentSlugs.data = currentSlugs
+        console.log(props)
+        newSearch(props) // oppdatere props her.
     }
     return (
         <div className={style.ButtonWrap}>

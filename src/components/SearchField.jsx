@@ -3,6 +3,7 @@ import { newSearch } from "../utilities/search/newSearch.js";
 export function SearchField(props) {
   const query = props.useStateInfo.query.data
   function doAnewSearch()   {
+    props.useStateInfo.query.data = query
     newSearch(props)
   }
   return (
