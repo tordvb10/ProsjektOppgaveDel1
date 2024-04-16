@@ -1,5 +1,6 @@
 .ArticleBox {
-  background-color: brown;
+  margin: 0 0 0 10rem;
+  background-color: #fff;
   font-family: "Titillium Web", sans-serif;
   font-style: normal;
   display: flex;
@@ -35,8 +36,10 @@
 }
 
 .ArticleBox > ul > li {
-  border: 1px solid black;
-  padding: 0.5rem;
+  color: #848d96;
+  border: 1px solid #848d96;
+  border-radius: 0.5rem;
+  padding: 0 0.4rem;
 }
 
 .ArticleBox > ul > li > .p_tag {

@@ -8,6 +8,9 @@ export function ArticleBox(props) {
       <h4 className={style.name}>{article.author.username}</h4>
       <p className={style.data}>{article.createdAt}</p>
       <h3 className={style.slugs}>{article.slug}</h3>
+      <p className={style.p_link}>
+        <Link to={`/article/${article.slug}`}>READ MORE...</Link>
+      </p>
       <ul className={style.taglister}>
         {article.tagList.map((tag) => {
           return (
@@ -16,9 +19,6 @@ export function ArticleBox(props) {
             </li>
           );
         })}
-        <p className={style.p_link}>
-          <Link to={`/article/${article.slug}`}>READ MORE...</Link>
-        </p>
       </ul>
     </div>
   );
