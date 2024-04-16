@@ -6,6 +6,7 @@ export function newSearch(props) {
     const setResults = (value) => {props.useStateInfo.results.funk(value)}
     const event = document.querySelector("#searchID").value;
     setQuery(event);
+    console.log(currentSlugs)
     const filteredResults = searchArticles(event,filterArticleBySlugs(currentSlugs));
     console.log(filteredResults)
     let final_results = filteredResults;
@@ -17,6 +18,7 @@ export function newSearch(props) {
       final_results = filterArticleBySlugs(currentSlugs);
     }
     console.log(final_results)
+    console.log("!!!SET RESULT!!!!!")
     setResults(final_results);
 }
   
