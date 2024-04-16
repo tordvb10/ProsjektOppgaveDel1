@@ -1,6 +1,4 @@
-import { articles } from "../jsonfiles/GET-articles-ALLKEYS.json"
-
-export function searchArticles(query) {
+export function searchArticles(query,articles) {
   const lowercasedQuery = query.toLowerCase();
   return articles.filter((item) => {
     const matchesSlug = item.slug.toLowerCase().includes(lowercasedQuery);

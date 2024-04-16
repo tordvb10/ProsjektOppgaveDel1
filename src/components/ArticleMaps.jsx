@@ -1,4 +1,3 @@
-import style from "./ArticleMaps.module.css";
 import { ArticleBox } from "./ArticleBox.jsx";
 export function ArticleMaps(props) {
   const results = props.results;
