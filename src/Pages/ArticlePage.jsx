@@ -4,7 +4,7 @@ import { SearchBox } from "../components/SearchBox.jsx";
 import { ArticleResultList } from "../components/ArticleResultList.jsx";
 import { articles } from "../utilities/jsonfiles/GET-articles-ALLKEYS.json";
 import styles from "./ArticlePage.module.css";
-import { filterArticleBySlugs } from "../utilities/search/filterArticleBySlugs.js";
+import { filterArticleBySlugs } from "../components/javascript/filterArticleBySlugs.js";
 export function ArticlePage() {
   const [currentSlugs, setCurrentSlugs] = useState(
     articles.map((article) => {
