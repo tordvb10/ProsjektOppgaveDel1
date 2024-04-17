@@ -32,14 +32,11 @@ export function ArticlePage() {
       funk: setCurrentTags,
     },
   };
-  const imports = {
-    articles: articles,
-  };
   return (
     <main className={styles.main}>
-      <SearchBox useStateInfo={useStateInfo} imports={imports} />
-      <SearchField useStateInfo={useStateInfo} imports={imports} />
-      <ArticleResultList useStateInfo={useStateInfo} imports={imports} />
+      <SearchBox useStateInfo={useStateInfo} />
+      <SearchField useStateInfo={useStateInfo} />
+      <ArticleResultList useStateInfo={useStateInfo} />
     </main>
   );
 }

@@ -9,7 +9,7 @@ export function ArticleMaps(props) {
         results.map((article) => {
           return (
             <li key={article.slug}>
-              <ArticleBox ArticleElement={article} />
+              <ArticleBox ArticleElement={article} useStateInfo={props.useStateInfo} />
             </li>
           );
         })

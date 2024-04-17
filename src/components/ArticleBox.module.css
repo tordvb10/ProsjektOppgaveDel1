@@ -45,6 +45,8 @@
 
 .ArticleBox > ul > li > .p_tag {
   margin: 0;
+  background: transparent;
+  border: none;
 }
 
 .ArticleBox > ul > .p_link {
