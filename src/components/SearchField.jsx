@@ -1,5 +1,5 @@
 import style from "./SearchField.module.css";
-import { newSearch } from "../utilities/search/newSearch.js";
+import { newSearch } from "./javascript/newSearch.js";
 export function SearchField(props) {
   const query = props.useStateInfo.query.data
   function doAnewSearch() {

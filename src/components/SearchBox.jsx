@@ -1,7 +1,7 @@
 import { data as OBJ } from "../utilities/jsonfiles/searchSortArrays.json";
 import { articles } from "../utilities/jsonfiles/GET-articles-ALLKEYS.json";
 import style from "./SearchBox.module.css";
-import { newSearch } from "../utilities/search/newSearch.js";
+import { newSearch } from "./javascript/newSearch.js";
 export function SearchBox(props) {
     const setCurrentSlugs = (value) => {props.useStateInfo.currentSlugs.funk(value)}
     const [currentTags, setCurrentTags] = [props.useStateInfo.tags.data,(value) => {props.useStateInfo.tags.funk(value)}]
