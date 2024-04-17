@@ -4,7 +4,6 @@ export function SearchField(props) {
   const query = props.useStateInfo.query.data
   function doAnewSearch() {
     props.useStateInfo.query.data = query
-    console.log(props)
     newSearch(props)
   }
   return (
