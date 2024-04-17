@@ -1,17 +1,54 @@
 .ArticleBox {
-  background-color: brown;
+  width: 60%;
+  margin: 0 0 0 10rem;
+  background-color: #fff;
+  font-family: "Titillium Web", sans-serif;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  position: relative;
+  height: auto;
 }
 
 .ArticleBox > img {
   height: 2rem;
   width: 2rem;
   border-radius: 1rem;
+  align-self: flex-start;
 }
 
-.name {
-  background-color: cyan;
+.name,
+.data,
+.slugs {
+  align-self: flex-start;
 }
 
-.data {
-  background-color: magenta;
+.ArticleBox > ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  margin-top: auto;
+  align-self: flex-end;
+  padding: 0;
+  margin: 0;
+}
+
+.ArticleBox > ul > li {
+  color: #848d96;
+  border: 1px solid #848d96;
+  border-radius: 0.5rem;
+  padding: 0 0.4rem;
+}
+
+.ArticleBox > ul > li > .p_tag {
+  margin: 0;
+}
+
+.ArticleBox > ul > .p_link {
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
 }

@@ -1,9 +1,18 @@
 .ButtonWrap {
-    background-color: bisque;
+  background-color: #f3f2f5;
+  width: 20%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
 }
+
 .buttontag {
-    background-color: aqua;
+  color: #fff;
+  background-color: #848d96;
+  border: 1px solid #848d96;
+  border-radius: 0.5rem;
+  padding: 0 0.4rem;
 }
 .buttentagIsActive {
-    background-color: blue;
+  background-color: blue;
 }

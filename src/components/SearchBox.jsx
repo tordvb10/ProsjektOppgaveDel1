@@ -1,6 +1,6 @@
-import {data as OBJ} from "../utilities/jsonfiles/searchSortArrays.json" ;
-import { articles } from "../utilities/jsonfiles/GET-articles-ALLKEYS.json"
-import style from "./SearchBox.module.css"
+import { data as OBJ } from "../utilities/jsonfiles/searchSortArrays.json";
+import { articles } from "../utilities/jsonfiles/GET-articles-ALLKEYS.json";
+import style from "./SearchBox.module.css";
 import { newSearch } from "../utilities/search/newSearch.js";
 export function SearchBox(props) {
     console.log(props.useStateInfo)
