@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { format } from "date-fns";
 import style from "./ArticleBox.module.css";
 import styletag from "./SearchBox.module.css";
-
+import { clickTag } from "./javascript/clickTag.js";
 export function ArticleBox(props) {
   const article = props.ArticleElement;
 
