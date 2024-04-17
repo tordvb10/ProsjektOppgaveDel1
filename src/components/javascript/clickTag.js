@@ -10,6 +10,5 @@ export function clickTag(props,tag){
         document.querySelector(`#buttontagID${tag}`).classList.add(style.buttentagIsActive)
     }
     setCurrentTags(currentTags)
-    selectActiveArticles(props,currentTags)
-    newSearch(props)
+    newSearch(selectActiveArticles(props,currentTags))
 }
