@@ -8,10 +8,10 @@ export function clickTag(props,tag){
     console.log(currentTags)
     if (currentTags.includes(tag)){
         currentTags.splice(currentTags.indexOf(tag),1)
-        document.querySelector(`#buttontagID${tag}`).classList.remove(style.buttentagIsActive)
+        //document.querySelector(`#buttontagID${tag}`).classList.remove(style.buttentagIsActive)
     } else {
         currentTags.push(tag)
-        document.querySelector(`#buttontagID${tag}`).classList.add(style.buttentagIsActive)
+        //document.querySelector(`#buttontagID${tag}`).classList.add(style.buttentagIsActive)
     }
     setCurrentTags(currentTags)
     newSearch(selectActiveArticles(props,currentTags))
