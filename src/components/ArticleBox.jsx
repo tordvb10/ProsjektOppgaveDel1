@@ -6,9 +6,14 @@ import styletag from "./SearchBox.module.css";
 import { clickTag } from "./javascript/clickTag.js";
 export function ArticleBox(props) {
   const article = props.ArticleElement;
-
   const formattedDate = format(new Date(article.createdAt), "do MMMM yyyy");
-
+  function clickingTags(tag) {
+    const PROPS = {}
+    PROPS.useStateInfo = props.useStateInfo
+    console.log(PROPS)
+    console.log(props)
+    clickTag(PROPS,tag)
+  }
   return (
     <div className={style.ArticleBox}>
       <img src={article.author.image} alt="Author avatar" />
@@ -30,7 +35,7 @@ export function ArticleBox(props) {
                   : ""
               }`}
             >
-              <button className={style.p_tag}>{tag}</button>
+              <button onClick={()=>clickingTags(tag)} className={style.p_tag}>{tag}</button>
             </li>
           );
         })}
