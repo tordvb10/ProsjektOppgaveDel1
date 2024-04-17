@@ -5,7 +5,7 @@ export function ArticleResultList(props) {
     return (
         <div>
             <ul className={style.master_ul}>
-                <ArticleMaps results={results} />
+                <ArticleMaps results={results} useStateInfo={props.useStateInfo} />
             </ul>
         </div>
     )

@@ -1,4 +1,5 @@
 import style from "./ArticleBox.module.css";
+import styletag from "./SearchBox.module.css";
 import { Link } from "react-router-dom";
 export function ArticleBox(props) {
   const article = props.ArticleElement;
@@ -15,7 +16,10 @@ export function ArticleBox(props) {
         {article.tagList.map((tag) => {
           return (
             <li key={tag} className={style.l_itag}>
-              <p className={style.p_tag}>{tag}</p>
+              <button className={`${style.p_tag} ${
+                styletag.buttentagIsActive
+                //props.useStateInfo.currentTags.data.includes(tag)?styletag.buttentagIsActive:""
+              }`}>{tag}</button>
             </li>
           );
         })}
