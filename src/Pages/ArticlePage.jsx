@@ -11,9 +11,7 @@ export function ArticlePage() {
       return article.slug;
     })
   );
-  console.log(currentSlugs);
   const [results, setResults] = useState(filterArticleBySlugs(currentSlugs));
-  console.log(results);
   const [query, setQuery] = useState("");
   const [currentTags, setCurrentTags] = useState([]);
   const useStateInfo = {
@@ -39,8 +37,6 @@ export function ArticlePage() {
   };
   return (
     <main className={styles.main}>
-      {currentSlugs.join(", ")}
-
       <SearchBox useStateInfo={useStateInfo} imports={imports} />
       <SearchField useStateInfo={useStateInfo} imports={imports} />
       <ArticleResultList useStateInfo={useStateInfo} imports={imports} />
