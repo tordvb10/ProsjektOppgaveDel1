@@ -1,5 +1,6 @@
 .ButtonWrap {
   background-color: #f3f2f5;
+  line-height: normal;
   width: 20%;
   display: flex;
   flex-wrap: wrap;

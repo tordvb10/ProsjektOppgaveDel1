@@ -36,8 +36,8 @@ export function ArticlePage() {
     <main className={styles.main}>
       <SearchField useStateInfo={useStateInfo} />
       <div className={styles.articleBox}>
-        <SearchBox useStateInfo={useStateInfo} />
         <ArticleResultList useStateInfo={useStateInfo} />
+        <SearchBox useStateInfo={useStateInfo} />
       </div>
     </main>
   );
