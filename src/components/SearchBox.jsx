@@ -35,6 +35,9 @@ export function SearchBox(props) {
         selectActiveArticles(currentTags)
         newSearch(props)
     }
+    function clickingTags(tag) {
+        clickTag(props,tag)
+    }
     return (
         <div className={style.ButtonWrap}>
             {
@@ -44,7 +47,7 @@ export function SearchBox(props) {
                             <button 
                                 id={`buttontagID${tag}`} 
                                 className={style.buttontag} 
-                                onClick={() => clickTag(tag)} 
+                                onClick={() => clickingTags(tag)} 
                                 key={tag}>{tag}
                             </button>
                         )
