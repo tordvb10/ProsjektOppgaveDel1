@@ -1,14 +1,19 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import { format } from "date-fns";
 import style from "./ArticleBox.module.css";
 import styletag from "./SearchBox.module.css";
-import { Link } from "react-router-dom";
+
 export function ArticleBox(props) {
   const article = props.ArticleElement;
-  //console.log(props.useStateInfo.tags.data.includes("nostrum"))
+
+  const formattedDate = format(new Date(article.createdAt), "do MMMM yyyy");
+
   return (
     <div className={style.ArticleBox}>
       <img src={article.author.image} alt="Author avatar" />
       <h4 className={style.name}>{article.author.username}</h4>
-      <p className={style.data}>{article.createdAt}</p>
+      <p className={style.data}>{formattedDate}</p>
       <h3 className={style.slugs}>{article.slug}</h3>
       <p className={style.description}>{article.description}</p>
       <p className={style.p_link}>
