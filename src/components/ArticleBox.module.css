@@ -21,8 +21,16 @@
 
 .name,
 .data,
-.slugs {
+.title {
   align-self: flex-start;
+}
+
+.name {
+  color: #5cb85c;
+}
+
+.description {
+  color: #848d96;
 }
 
 .ArticleBox > ul {
@@ -44,13 +52,13 @@
 }
 
 .ArticleBox > ul > li > .p_tag {
+  color: #848d96;
   margin: 0;
   background: transparent;
   border: none;
 }
 
-.ArticleBox > ul > .p_link {
-  width: 100%;
-  text-align: center;
-  margin-top: 1rem;
+.ArticleBox > .p_link > a {
+  color: #848d96;
+  text-decoration: none;
 }

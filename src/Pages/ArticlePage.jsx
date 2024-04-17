@@ -34,9 +34,11 @@ export function ArticlePage() {
   };
   return (
     <main className={styles.main}>
-      <SearchBox useStateInfo={useStateInfo} />
       <SearchField useStateInfo={useStateInfo} />
-      <ArticleResultList useStateInfo={useStateInfo} />
+      <div className={styles.articleBox}>
+        <ArticleResultList useStateInfo={useStateInfo} />
+        <SearchBox useStateInfo={useStateInfo} />
+      </div>
     </main>
   );
 }
