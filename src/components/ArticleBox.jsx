@@ -11,8 +11,10 @@ export function ArticleBox(props) {
 
   return (
     <div className={style.ArticleBox}>
-      <img src={article.author.image} alt="Author avatar" />
-      <h4 className={style.name}>{article.author.username}</h4>
+      <div className={style.authoBox}>
+        <img src={article.author.image} alt="Author avatar" />
+        <h4 className={style.name}>{article.author.username}</h4>
+      </div>
       <p className={style.data}>{formattedDate}</p>
       <h3 className={style.slugs}>{article.slug}</h3>
       <p className={style.description}>{article.description}</p>

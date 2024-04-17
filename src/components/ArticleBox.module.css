@@ -19,6 +19,10 @@
   align-self: flex-start;
 }
 
+.authorBox {
+  display: inline-flex;
+}
+
 .name,
 .data,
 .title {
