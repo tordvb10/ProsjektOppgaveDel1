@@ -7,6 +7,7 @@ export function newSearch(props) {
     const event = document.querySelector("#searchID").value;
     setQuery(event);
     console.log(currentSlugs)
+    console.log(props.useStateInfo.tags.data)
     const filteredResults = searchArticles(event,filterArticleBySlugs(currentSlugs));
     console.log(filteredResults)
     let final_results = filteredResults;

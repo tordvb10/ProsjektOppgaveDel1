@@ -9,10 +9,13 @@ export function SearchBox(props) {
     function selectActiveArticles(ByTags){
         console.log(ByTags)
         console.log(ByTags.length)
+        let new_slugs = []
         if (ByTags.length === 0) {
-            setCurrentSlugs(articles.map((article)=>{return article.slug}))
+            new_slugs = articles.map((article)=>{return article.slug})
+            //setCurrentSlugs(articles.map((article)=>{return article.slug}))
         } else {
-            let new_slugs = []
+            new_slugs = []
+            console.log(new_slugs)
             ByTags.map((tag)=>{
                 OBJ.tagList[tag].map((slug)=>{
                     if (!new_slugs.includes(slug)){
@@ -20,11 +23,15 @@ export function SearchBox(props) {
                     }
                 })
             })
-            console.log(new_slugs)
-            setCurrentSlugs(new_slugs)
-            console.log(articles.map((article)=>{return article.slug}))
-            console.log(currentSlugs)
         }
+        const set_new_slugs = new_slugs
+        console.log(new_slugs)
+        console.log(set_new_slugs)
+        console.log(currentSlugs)
+        console.log(props)
+        setCurrentSlugs(set_new_slugs)
+        props.useStateInfo.currentSlugs.data = set_new_slugs
+        props.useStateInfo.tags.data = ByTags
         console.log(currentSlugs)
     }
     function clickTag(tag){
@@ -39,10 +46,10 @@ export function SearchBox(props) {
         console.log(currentTags)
         setCurrentTags(currentTags)
         console.log(currentTags)
+        console.log(currentSlugs)
         //let current_tags = OBJ.tagList[tag]
         selectActiveArticles(currentTags)
         console.log(currentSlugs)
-        props.useStateInfo.currentSlugs.data = currentSlugs
         console.log(props)
         newSearch(props) // oppdatere props her.
     }
