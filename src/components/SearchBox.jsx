@@ -9,11 +9,15 @@ export function SearchBox(props) {
         <div className={style.ButtonWrap}>
             {
                 Object.keys(OBJ.tagList).map((tag)=>{
-                    if (OBJ.tagList[tag].length > 1){
+                    console.log(OBJ.tagList[tag])
+                    if (OBJ.tagList[tag].length > 1){ // if el < 1 => display none
                         return (
                             <button 
-                                id={`buttontagID${tag}`} 
-                                className={style.buttontag} 
+                                className={`${style.buttontag} ${
+                                    props.useStateInfo.tags.data.includes(tag)
+                                      ? style.buttentagIsActive
+                                      : ""
+                                  }`}
                                 onClick={() => clickingTags(tag)} 
                                 key={tag}>{tag}
                             </button>
