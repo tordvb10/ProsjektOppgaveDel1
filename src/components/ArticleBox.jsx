@@ -8,14 +8,14 @@ export function ArticleBox(props) {
   const article = props.ArticleElement;
   const formattedDate = format(new Date(article.createdAt), "do MMMM yyyy");
   function clickingTags(tag) {
-    const PROPS = {}
-    PROPS.useStateInfo = props.useStateInfo
-    clickTag(PROPS,tag)
+    const PROPS = {};
+    PROPS.useStateInfo = props.useStateInfo;
+    clickTag(PROPS, tag);
   }
   return (
     <div className={style.ArticleBox}>
       <div className={style.articleMetadata}>
-        <div className={style.authoBox}>
+        <div className={style.authorBox}>
           <img src={article.author.image} alt="Author avatar" />
           <h4 className={style.name}>{article.author.username}</h4>
         </div>
@@ -37,7 +37,9 @@ export function ArticleBox(props) {
                   : ""
               }`}
             >
-              <button onClick={()=>clickingTags(tag)} className={style.p_tag}>{tag}</button>
+              <button onClick={() => clickingTags(tag)} className={style.p_tag}>
+                {tag}
+              </button>
             </li>
           );
         })}

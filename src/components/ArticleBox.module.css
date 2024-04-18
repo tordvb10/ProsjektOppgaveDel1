@@ -12,21 +12,25 @@
   height: auto;
 }
 
-.ArticleBox > img {
+.authorBox {
+  display: inline-flex;
+}
+
+.authorBox > img {
   height: 2rem;
   width: 2rem;
   border-radius: 1rem;
   align-self: flex-start;
 }
 
-.authorBox {
-  display: inline-flex;
-}
-
 .name,
 .data,
 .title {
   align-self: flex-start;
+}
+
+.name {
+  margin-left: 0.5em;
 }
 
 .name {
