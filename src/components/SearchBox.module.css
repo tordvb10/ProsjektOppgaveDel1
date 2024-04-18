@@ -2,7 +2,7 @@
   background-color: #f3f2f5;
   line-height: normal;
   width: 20%;
-  height: 8rem;
+  height: fit-content;
   display: flex;
   flex-wrap: wrap;
   gap: 1em;
@@ -14,10 +14,14 @@
   border: 1px solid #848d96;
   border-radius: 0.5rem;
   padding: 0 0.4rem;
-  /* margin: 1rem; */
 }
 
 /* FIX THIS!! */
 .buttentagIsActive {
   background-color: blue;
 }
+
+.buttentagIsActive * {
+  color: #f3f2f5 !important;
+}
+

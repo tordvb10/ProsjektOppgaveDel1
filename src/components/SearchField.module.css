@@ -18,3 +18,7 @@
 .SearchField > input:focus {
   border-color: blue; /* Border color when the input is focused */
 }
+
+.div_master {
+  max-width: fit-content;
+}
