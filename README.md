@@ -1,6 +1,6 @@
 <h1>Built with:</h1>
 
-<h3>- <a href="https://react.dev/">React</a> and </h3>  
+<h3>- <a href="https://react.dev/">React</a> & </h3>  
 <h3>- <a href="https://vitejs.dev/">Vite</a></h3>
 
 <p>Using the
@@ -14,5 +14,7 @@ we built a clone to be able to view the fictional articles with the ability to s
 
 <h1>Contributors:
 
-<h3> <a href="https://github.com/tordvb10">Tord</a> and </h3>
+<h3> <a href="https://github.com/tordvb10">Tord</a> & </h3>
 <h3><a href="https://github.com/NordikE">Erik</a></h3>
+
+<h1>Thank you for your interest</h1>
