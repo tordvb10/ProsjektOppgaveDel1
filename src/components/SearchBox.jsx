@@ -9,7 +9,6 @@ export function SearchBox(props) {
         <div className={style.ButtonWrap}>
             {
                 Object.keys(OBJ.tagList).map((tag)=>{
-                    console.log(OBJ.tagList[tag])
                     if (OBJ.tagList[tag].length > 1){ // if el < 1 => display none
                         return (
                             <button 
