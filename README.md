@@ -7,10 +7,10 @@
 <a href="https://realworld-docs.netlify.app/docs/specs/frontend-specs/swagger/">Real World API</a>
 we built a clone to be able to view the fictional articles with the ability to search and filter by tag.</p>
 
-<h2>When viewing the code, it is necessary to install Node.  In the terminal, you need the following commands:</h2>
+<h3>When viewing the code, it is necessary to install Node.  In the terminal, you need the following commands:</h3>
 
-<h3>- npm install</h3>
-<h3>- npm install date-fns</h3>
+<h4>- npm install</h4>
+<h4>- npm install date-fns</h4>
 
 <h1>Contributors:
 
