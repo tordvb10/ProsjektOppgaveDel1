@@ -9,8 +9,8 @@ we built a clone to be able to view the fictional articles with the ability to s
 
 <h2>When viewing the code, it is necessary to install Node.  In the terminal, you need the following commands:</h2>
 
-<h3>- npm install</h3>
-<h3>- npm install date-fns</h3>
+<h4>- npm install</h4>
+<h4>- npm install date-fns</h4>
 
 <h1>Contributors:
 
