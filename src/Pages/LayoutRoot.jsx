@@ -35,7 +35,7 @@ export function LayoutRoot() {
       <Outlet />
       <footer className={styles.footer}>
         <a href="https://github.com/tordvb10/ProsjektOppgaveDel1">
-          <img src="./src/Images/github.webp" alt="Github Logo" />
+          <img src="../../src/Images/github.webp" alt="Github Logo" />
           <div>
             <p>React Prosjekt: Tord & Erik</p>
             <p>Fork on Github</p>
