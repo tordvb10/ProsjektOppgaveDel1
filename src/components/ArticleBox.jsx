@@ -10,8 +10,6 @@ export function ArticleBox(props) {
   function clickingTags(tag) {
     const PROPS = {}
     PROPS.useStateInfo = props.useStateInfo
-    console.log(PROPS)
-    console.log(props)
     clickTag(PROPS,tag)
   }
   return (
