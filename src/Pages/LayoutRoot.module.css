@@ -1,6 +1,5 @@
-#root {
-  display: flex;
-  flex-direction: column;
+header {
+  min-width: 100vw;
 }
 
 .nav {
