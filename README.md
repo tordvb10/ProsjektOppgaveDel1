@@ -1,9 +1,10 @@
+<h1>Built with</h1>
+
 # React + Vite
 
-We used the 
+We used the
 <a href="https://realworld-docs.netlify.app/docs/specs/frontend-specs/swagger/">Api</a>
 link to filter search and tags to view the fictional article from the respective Api.
-
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
