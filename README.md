@@ -3,9 +3,9 @@
 <h3>- <a href="https://react.dev/">React</a> & </h3>  
 <h3>- <a href="https://vitejs.dev/">Vite</a></h3>
 
-<p>Using the
+<h2>Using the
 <a href="https://realworld-docs.netlify.app/docs/specs/frontend-specs/swagger/">Real World API</a>
-we built a clone to be able to view the fictional articles with the ability to search and filter by tag.</p>
+we built a clone to be able to view the fictional articles with the ability to search and filter by tag.</ph2>
 
 <h2>When viewing the code, it is necessary to install Node.  In the terminal, you need the following commands:</h2>
 
